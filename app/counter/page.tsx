@@ -1,7 +1,9 @@
 import { Counter } from "./counter";
 
 export const metadata = {
-    title: "Counter",
+    title: {
+      absolute: "Counter Page",
+    }
 };
 
 export default function CounterPage() {
