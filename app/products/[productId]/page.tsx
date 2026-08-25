@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Metadata } from "next";
 
 type Props = {
@@ -17,5 +18,10 @@ const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
 
 export default async function ProductDetails({ params }: Props) {
   const productId = (await params).productId;
-  return <h1>Details about Product {productId}</h1>;
+  return (
+    <>
+      <Link href="/">Home</Link>
+      <h1>Details about Product {productId}</h1>
+    </>
+  );
 }
